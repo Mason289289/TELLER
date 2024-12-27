@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.1-9-gee910b2-dirty  Build Version: 1.6.9034.11310
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Whole BODY URDF SET UP ( V2 )">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-3.79190785246178E-12 -4.73285476426069E-11 1.22993156310138E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.071294423148794" />
+      <inertia
+        ixx="0.00039909716321472"
+        ixy="-6.42255536015403E-13"
+        ixz="-1.70947655441163E-16"
+        iyy="3.1007733586229E-05"
+        iyz="-3.32423473596328E-15"
+        izz="0.000378318474974679" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Front_Hip">
+    <inertial>
+      <origin
+        xyz="-0.0542406994322873 0.0327335172749213 3.69224386728647E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.122989405191837" />
+      <inertia
+        ixx="0.000104696460550069"
+        ixy="-5.87910722635516E-13"
+        ixz="-4.97582005308306E-12"
+        iyy="9.37282525412572E-05"
+        iyz="2.09107841059147E-08"
+        izz="0.000157523573859397" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Front_Hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Front_Hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front_Hip"
+    type="fixed">
+    <origin
+      xyz="0.0542407007709616 0.1149985 5.35317635531158E-05"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Front_Hip" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Front_Left_Shoulder">
+    <inertial>
+      <origin
+        xyz="0.0137739851795447 -0.0125083167030698 -0.0391386009814933"
+        rpy="0 0 0" />
+      <mass
+        value="0.140436940047647" />
+      <inertia
+        ixx="2.80379795093138E-05"
+        ixy="5.40046079082891E-07"
+        ixz="5.83190778717332E-09"
+        iyy="4.80687439403981E-05"
+        iyz="1.13010403668756E-07"
+        izz="4.46905233653811E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Front_Left_Shoulder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Front_Left_Shoulder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front_Left_Shoulder"
+    type="revolute">
+    <origin
+      xyz="-0.118561401541924 0 0"
+      rpy="1.5707963267949 -0.0365489253746626 0" />
+    <parent
+      link="Front_Hip" />
+    <child
+      link="Front_Left_Shoulder" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Upper_Leg">
+    <inertial>
+      <origin
+        xyz="-0.013828468336801 -0.0347803760792297 0.0524397996627176"
+        rpy="0 0 0" />
+      <mass
+        value="0.0622185371057375" />
+      <inertia
+        ixx="3.95026603492114E-05"
+        ixy="3.21197096295723E-06"
+        ixz="-4.52317411179885E-06"
+        iyy="3.18332809188606E-05"
+        iyz="1.54040416662482E-05"
+        izz="2.00120493439797E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Front_Left_Upper_Leg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Front_Left_Upper_Leg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front_Left_Upper_Leg"
+    type="revolute">
+    <origin
+      xyz="-0.00185531578486946 -0.0359521599259129 -0.0287921500156247"
+      rpy="0.940540322874895 -0.0416664486626156 -0.0211815707953396" />
+    <parent
+      link="Front_Left_Shoulder" />
+    <child
+      link="Front_Left_Upper_Leg" />
+    <axis
+      xyz="0.998671109053135 -0.0515365495797057 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Lower_Leg">
+    <inertial>
+      <origin
+        xyz="-0.013627773699421 -0.0505339035503839 -0.0279236330848666"
+        rpy="0 0 0" />
+      <mass
+        value="0.0155256621613376" />
+      <inertia
+        ixx="2.38562608052736E-05"
+        ixy="-8.45654826937263E-07"
+        ixz="-4.48322423473567E-07"
+        iyy="5.96509335756933E-06"
+        iyz="-9.53108411145718E-06"
+        izz="1.82031583321377E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Front_Left_Lower_Leg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Front_Left_Lower_Leg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front_Left_Lower_Leg"
+    type="revolute">
+    <origin
+      xyz="-0.0239845511436166 -0.0511939313025561 0.0774627196076526"
+      rpy="-1.41646272232564 0.0509476316630302 -0.0436370237871092" />
+    <parent
+      link="Front_Left_Upper_Leg" />
+    <child
+      link="Front_Left_Lower_Leg" />
+    <axis
+      xyz="0.998671109053135 -0.0515365495797045 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Shoulder">
+    <inertial>
+      <origin
+        xyz="-0.00461374227477768 -0.0147975561386528 -0.0391253002509455"
+        rpy="0 0 0" />
+      <mass
+        value="0.107869096375755" />
+      <inertia
+        ixx="2.22394596492884E-05"
+        ixy="4.94574385861692E-07"
+        ixz="-2.34396356728717E-07"
+        iyy="3.46102501709838E-05"
+        iyz="-4.77724670579504E-08"
+        izz="2.85445263842194E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Front_Right_Shoulder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Front_Right_Shoulder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front_Right_Shoulder"
+    type="revolute">
+    <origin
+      xyz="0.01 0 0"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="Front_Hip" />
+    <child
+      link="Front_Right_Shoulder" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Upper_Leg">
+    <inertial>
+      <origin
+        xyz="0.0145550029352903 -0.0502252403815318 0.0259318743793064"
+        rpy="0 0 0" />
+      <mass
+        value="0.0933622195739167" />
+      <inertia
+        ixx="7.29830993324334E-05"
+        ixy="-1.14286742787086E-05"
+        ixz="5.90010674565742E-06"
+        iyy="2.77722076589883E-05"
+        iyz="2.5260247986535E-05"
+        izz="6.365336801426E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Front_Right_Upper_Leg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Front_Right_Upper_Leg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front_Right_Upper_Leg"
+    type="revolute">
+    <origin
+      xyz="0 -0.036 -0.029045"
+      rpy="0.44974 0 0" />
+    <parent
+      link="Front_Right_Shoulder" />
+    <child
+      link="Front_Right_Upper_Leg" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Lower_Leg">
+    <inertial>
+      <origin
+        xyz="0.00576780968735226 -0.0400146670662228 -0.0384290667257317"
+        rpy="0 0 0" />
+      <mass
+        value="0.0163128824034601" />
+      <inertia
+        ixx="2.39312087583541E-05"
+        ixy="-6.54525511915453E-08"
+        ixz="-6.28595038453952E-08"
+        iyy="1.16247328034214E-05"
+        iyz="-1.13363303959217E-05"
+        izz="1.2541700988633E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Front_Right_Lower_Leg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Front_Right_Lower_Leg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front_Right_Lower_Leg"
+    type="revolute">
+    <origin
+      xyz="0.0265392992290382 -0.0830793712108725 0.0428960147240504"
+      rpy="-1.19874044905665 0 0" />
+    <parent
+      link="Front_Right_Upper_Leg" />
+    <child
+      link="Front_Right_Lower_Leg" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Hip">
+    <inertial>
+      <origin
+        xyz="-0.0542406994322873 0.0327335172749213 3.69224386728792E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.122989405191837" />
+      <inertia
+        ixx="0.000104696460550069"
+        ixy="-5.87910662549153E-13"
+        ixz="-4.97582009755223E-12"
+        iyy="9.37282525412574E-05"
+        iyz="2.09107841058986E-08"
+        izz="0.000157523573859397" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Back_Hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Back_Hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Back_Hip"
+    type="fixed">
+    <origin
+      xyz="0.0542407007709615 -0.1897985 5.35317635530875E-05"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Back_Hip" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Back_Right_Shoulder">
+    <inertial>
+      <origin
+        xyz="-0.00461374227477766 -0.0147975561386528 -0.0391253002509455"
+        rpy="0 0 0" />
+      <mass
+        value="0.107869096375755" />
+      <inertia
+        ixx="2.22394596492884E-05"
+        ixy="4.94574385861687E-07"
+        ixz="-2.34396356728706E-07"
+        iyy="3.46102501709838E-05"
+        iyz="-4.77724670579554E-08"
+        izz="2.85445263842194E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Back_Right_Shoulder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Back_Right_Shoulder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Back_Right_Shoulder"
+    type="revolute">
+    <origin
+      xyz="0.01 0 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="Back_Hip" />
+    <child
+      link="Back_Right_Shoulder" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Upper_Leg">
+    <inertial>
+      <origin
+        xyz="0.0145550053871803 -0.0502252420928833 0.0259318753118444"
+        rpy="0 0 0" />
+      <mass
+        value="0.0933621516080197" />
+      <inertia
+        ixx="7.29830747018299E-05"
+        ixy="-1.14286631327967E-05"
+        ixz="5.90010371255244E-06"
+        iyy="2.77721811554339E-05"
+        iyz="2.52602440014786E-05"
+        izz="6.36533221440965E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Back_Right_Upper_Leg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Back_Right_Upper_Leg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Back_Right_Upper_Leg"
+    type="revolute">
+    <origin
+      xyz="0 -0.0360000000000002 -0.0290449999999998"
+      rpy="0.475650962623188 0 0" />
+    <parent
+      link="Back_Right_Shoulder" />
+    <child
+      link="Back_Right_Upper_Leg" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Lower_Leg">
+    <inertial>
+      <origin
+        xyz="0.00576780968178839 -0.0400146670657066 -0.0384290667120216"
+        rpy="0 0 0" />
+      <mass
+        value="0.0163128824062683" />
+      <inertia
+        ixx="2.39312087567548E-05"
+        ixy="-6.54525438821805E-08"
+        ixz="-6.2859497216114E-08"
+        iyy="1.16247328026077E-05"
+        iyz="-1.13363303950842E-05"
+        izz="1.25417009878186E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Back_Right_Lower_Leg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Back_Right_Lower_Leg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Back_Right_Lower_Leg"
+    type="revolute">
+    <origin
+      xyz="0.0265392992290382 -0.0830793712108724 0.0428960147240505"
+      rpy="-1.20853606323344 0 0" />
+    <parent
+      link="Back_Right_Upper_Leg" />
+    <child
+      link="Back_Right_Lower_Leg" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Shoulder">
+    <inertial>
+      <origin
+        xyz="0.0137672464683883 -0.012515733265331 -0.0391386009811263"
+        rpy="0 0 0" />
+      <mass
+        value="0.140436940048382" />
+      <inertia
+        ixx="2.80385670336967E-05"
+        ixy="5.50833906686902E-07"
+        ixz="5.89277080733467E-09"
+        iyy="4.80681564157603E-05"
+        iyz="1.13007246021601E-07"
+        izz="4.46905233660077E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Back_Left_Shoulder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Back_Left_Shoulder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Back_Left_Shoulder"
+    type="revolute">
+    <origin
+      xyz="-0.118561401541923 0 0"
+      rpy="1.5707963267949 -0.0348277893882829 0" />
+    <parent
+      link="Back_Hip" />
+    <child
+      link="Back_Left_Shoulder" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Upper_Leg">
+    <inertial>
+      <origin
+        xyz="-0.0139225751564403 -0.0355664907379372 0.0518891619621726"
+        rpy="0 0 0" />
+      <mass
+        value="0.0622186079139299" />
+      <inertia
+        ixx="3.95156477351144E-05"
+        ixy="3.25854795211541E-06"
+        ixz="-4.44575114070896E-06"
+        iyy="3.13613450807017E-05"
+        iyz="1.55816275661627E-05"
+        izz="2.04710672878226E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Back_Left_Upper_Leg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Back_Left_Upper_Leg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Back_Left_Upper_Leg"
+    type="revolute">
+    <origin
+      xyz="-0.0018553 -0.035952 -0.028792"
+      rpy="0.97568 -0.042707 -0.022664" />
+    <parent
+      link="Back_Left_Shoulder" />
+    <child
+      link="Back_Left_Upper_Leg" />
+    <axis
+      xyz="0.99867 -0.051537 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Lower_Leg">
+    <inertial>
+      <origin
+        xyz="-0.0135010627757997 -0.0498626288456318 -0.0291747645759395"
+        rpy="0 0 0" />
+      <mass
+        value="0.0155256628725993" />
+      <inertia
+        ixx="2.38552235022288E-05"
+        ixy="-8.56562370246991E-07"
+        ixz="-4.54289055186908E-07"
+        iyy="5.96615071085713E-06"
+        iyz="-9.53081394361671E-06"
+        izz="1.82031383642722E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Back_Left_Lower_Leg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Whole BODY URDF SET UP ( V2 )/meshes/Back_Left_Lower_Leg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Back_Left_Lower_Leg"
+    type="revolute">
+    <origin
+      xyz="-0.024177 -0.051184 0.077463"
+      rpy="-1.4523 0.051199 -0.045467" />
+    <parent
+      link="Back_Left_Upper_Leg" />
+    <child
+      link="Back_Left_Lower_Leg" />
+    <axis
+      xyz="0.99867 -0.051537 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
